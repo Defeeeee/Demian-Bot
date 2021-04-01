@@ -12,6 +12,6 @@ module.exports = class NicknameCommand extends BaseCommand {
     const mentionedMember = message.mentions.first() || message.guild.members.cache.get(args[0]);
     const nickName = args.slice(1).join(" ");
 
-    if (!args[0]) return message.channel.send("Tenes que mencionar a un miembro `e!nickname @miembro nickname`")
+    if (!args[0]) return message.channel.send("Tenes que mencionar a un miembro `e!nickname @miembro nickname`");
     }
 }
