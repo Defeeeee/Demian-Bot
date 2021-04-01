@@ -9,9 +9,10 @@ module.exports = class NukeCommand extends BaseCommand {
 
     if (!message.member.hasPermission("MANAGE_CHANNELS")) return message.channel.send("No podes usar este comando");
     if (!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.channel.send("Ni rol no tiene el permiso de administrar los canales");
-
+    if (!message.author.hasRole(827322556649439243)) return message.channel.send("No podes usar este comando master");
     let reason = args.join("");
     const nukeChannel = message.channel;
+
 
     if (!reason) reason = "No hay razon"
     if (!nukeChannel.deletable) return message.channel.send("Este canal no se puede borrar");
