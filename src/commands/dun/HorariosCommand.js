@@ -17,7 +17,7 @@ module.exports = class HorariosCommand extends BaseCommand {
         await message.channel.send(horarioEmbed)
       } catch (err) {
         console.log(err);
-        message.channel.send('No pude enviar el mensaje');
+        message.channel.send('No pude enviar el mensaje.');
     }
   }
 }
