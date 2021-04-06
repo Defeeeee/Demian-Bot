@@ -8,7 +8,7 @@ module.exports = class PurgeCommand extends BaseCommand {
   async run(client, message, args) {
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send('No podes usar este comando.');
     if (!message.guild.me.hasPermission("MANAGE_MESSAGES")) return message.channel.send("no tengo el permiso para \`MANAGE_MESSAGES\`");
-    if (!args[0]) return message.channel.send("dame un numero de mensajes \`e!purge [numero]\`");
+    if (!args[0]) return message.channel.send("dame un numero de mensajes \`!purge [numero]\`");
     const amountToDelete = Number(args[0], 10);
 
     if (isNaN(amountToDelete)) return message.channel.send("Eso no es un numero valido")

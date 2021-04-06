@@ -12,7 +12,7 @@ module.exports = class BanCommand extends BaseCommand {
     let reason = args.slice(1).join(" ");
     const mentionedMember = message.mentions.members.first();
     if (!reason) reason = 'No hay razon'
-    if (!args[0]) return message.channel.send('Tenes que especificar a quien queres banear `e!ban @usuario razon`');
+    if (!args[0]) return message.channel.send('Tenes que especificar a quien queres banear `!ban @usuario razon`');
     if (!mentionedMember) return message.channel.send('El miembro no esta en el server');
     if (!mentionedMember.bannable) return message.channel.send('No puedo banear a ese miembro');
     const banEmbed = new Discord.MessageEmbed()
