@@ -21,7 +21,7 @@ module.exports = class UnbanCommand extends BaseCommand {
         console.log(err);
         return message.channel.send('Algo no funciono intentando desbanear esa ID');
       }).then(() => {
-        message.channel.send(`${arg[0]} ha sido desbanead@`);
+        message.channel.send(`${args[0]} ha sido desbanead@`);
       })
     });
   }
