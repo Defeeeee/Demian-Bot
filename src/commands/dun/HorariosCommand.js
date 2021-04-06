@@ -6,14 +6,18 @@ module.exports = class HorariosCommand extends BaseCommand {
     super('horarios', 'dun', []);
   }
 
-  run(client, message, args) {
-    const horarioEmbed = new Discord.MessageEmbed()
-      .setTitle("Horarios")
+  async run(client, message, args) {
+
+    let dia = args[0]
+
+    const horarioEmbedLunes = new Discord.MessageEmbed()
+      .setTitle("Horarios Lunes")
       .setDescription("Ed. Judia 8:05 a 9:05, Matematica 9:20 a 10:40, Ingles 10:55 a 12:15")
       .setFooter(message.author.tag, message.author.displayAvatarURL())
       .setColor("#0B97B9")
       .setTimestamp();
 
-      message.channel.send(horarioEmbed);
+      if (!dia) message.channel.send('Tenes que especificar un dia. `e!horarios dia`');
+      if (args[0] = 'lunes'(message.channel.send(horarioEmbedLunes)));
   }
 }
