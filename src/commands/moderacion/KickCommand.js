@@ -17,7 +17,7 @@ module.exports = class KickCommand extends BaseCommand {
     .setColor("#0B97B9")
     .setTimestamp()
     .setFooter(client.user.tag, client.user.displayAvatarURL());
-    if (!args[0]) return message.channel.send("Necesitas poner el usuario para kickear. `!kick @user reason`")
+    if (!args[0]) return message.channel.send("Necesitas poner el usuario para kickear. ` !kick @user reason`")
     if (!mentionedMember) return message.channel.send('El usuario no está en el server')
  
   try {
