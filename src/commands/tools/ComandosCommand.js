@@ -15,6 +15,7 @@ module.exports = class ComandosCommand extends BaseCommand {
       .setTitle(`Comandos`)
       .addField(`Diversion`, '\u200b')
       .addField('Say: Basicamente sirve para que el bot diga cualquier cosa `!say [lo que quieras]`', '\u200b')
+      .addField('Lauti: lauti', '\u200b')
       .addField('Moderacion', '\u200b')
       .addField('Ban: Para banear miembros `!ban @usuario {razon}`', '\u200b')
       .addField('Kick: Para expulsar a miembros `!kick @usuario {razon}`', '\u200b')
