@@ -9,7 +9,8 @@ module.exports = class LautiCommand extends BaseCommand {
   async run(client, message, args) {
     const lautiEmbed = new Discord.MessageEmbed()
       .setTitle('Lauti Pared')
-      .setImage('https://imgur.com/a/2hOsnDF')
+      .attachFiles(['../assets/image0.jpeg'])
+      .setImage('attachment://image0.jpeg')
       .setColor('RANDOM');
 
     message.channel.send(lautiEmbed);
